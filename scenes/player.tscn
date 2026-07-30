@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://csngifspvmidx"]
+
+[ext_resource type="Texture2D" uid="uid://47pnnu8fmt12" path="res://sprites/level/LevelBlocks.png" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://dp0fdn8hso6mb" path="res://scripts/player.gd" id="1_g2els"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
+size = Vector2(16, 16)
+
+[node name="Player" type="CharacterBody2D" unique_id=138758934]
+script = ExtResource("1_g2els")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=133129737]
+position = Vector2(0, -8)
+texture = ExtResource("1_3vyb7")
+region_enabled = true
+region_rect = Rect2(48, 16, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=616702216]
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_g2els")
